@@ -3,7 +3,6 @@ rm(list=ls())
 
 # load required packages
 library(dplyr)
-library(tidyverse)
 library(readr)
 
 # import table 3 from Winiarksa, Szymanski and Osiejuk (2024)
