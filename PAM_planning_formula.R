@@ -3,6 +3,8 @@ rm(list=ls())
 
 # load required packages
 library(dplyr)
+library(tidyverse)
+library(readr)
 
 # import table 3 from Winiarksa, Szymanski and Osiejuk (2024)
 european_bird_data <- read.csv("data/Winiarska_et_al_2024_table3.csv")
@@ -32,3 +34,5 @@ head(european_bird_planning)
 # check the minimum, non-NA recommended deciduous_D for this subset of species
 min(european_bird_planning$deciduous_D, na.rm = TRUE)
 
+# save the final dataframe to project files
+write_csv(european_bird_planning, "data/PAM_recommended_distances.csv")
